@@ -1,0 +1,932 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generated_at": "2026-01-03T06:30:00Z",
+    "total_agents": 122,
+    "standards": ["CMP-IS", "EMBOK", "APEX"],
+    "domains": {
+      "A": "Strategic Planning",
+      "D": "Financial Management"
+    }
+  },
+
+  "STR-001": {
+    "title": "이벤트 목표 설정",
+    "title_en": "Event Goal Setting",
+    "definition": "이벤트의 핵심 목표를 SMART 원칙에 따라 정의합니다. 모호한 '성공적인 이벤트'가 아닌, 측정 가능하고 달성 가능한 구체적 목표를 수립합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 1: Goal Setting",
+    "pro_tip": "목표는 '왜'에서 시작하세요. 참석자 수보다 '어떤 변화를 만들 것인가'를 먼저 정의하면 나머지 의사결정이 쉬워집니다.",
+    "keywords": ["목표", "KPI", "성과", "SMART", "성공 기준"],
+    "related_agents": ["STR-008", "STR-043", "FIN-017"]
+  },
+
+  "STR-002": {
+    "title": "이해관계자 분석",
+    "title_en": "Stakeholder Analysis",
+    "definition": "이벤트에 영향을 미치거나 영향을 받는 모든 관계자를 식별하고, 그들의 관심사와 영향력을 분석합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 2: Stakeholder Analysis",
+    "pro_tip": "이해관계자 매핑은 2x2 매트릭스(영향력 vs 관심도)로 시작하세요. '높은 영향력-높은 관심'군은 긴밀히 관리하고, '높은 영향력-낮은 관심'군은 만족시켜야 합니다.",
+    "keywords": ["이해관계자", "영향력", "관심도", "매핑"],
+    "related_agents": ["STR-014", "STR-015", "STR-016"]
+  },
+
+  "STR-003": {
+    "title": "리스크 식별 및 평가",
+    "title_en": "Risk Identification & Assessment",
+    "definition": "이벤트 실행을 위협할 수 있는 잠재적 위험 요소를 식별하고, 발생 가능성과 영향도를 평가합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "과거 유사 이벤트의 Post-mortem 보고서는 금광입니다. '날씨'와 '기술 장애'는 거의 모든 이벤트에서 Top 5 리스크에 포함됩니다.",
+    "keywords": ["리스크", "위험", "대비", "완화", "contingency"],
+    "related_agents": ["STR-027", "STR-028", "STR-030"]
+  },
+
+  "STR-004": {
+    "title": "비전 정의",
+    "title_en": "Vision Definition",
+    "definition": "이벤트가 궁극적으로 달성하고자 하는 미래상을 정의합니다. 비전은 모든 의사결정의 북극성 역할을 합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 1: Goal Setting",
+    "pro_tip": "좋은 비전 문장은 10단어 이내로 누구나 기억할 수 있어야 합니다. '업계 최고의 네트워킹 이벤트'보다 '연결이 기회가 되는 순간'이 더 강력합니다.",
+    "keywords": ["비전", "미래상", "방향", "지향점"],
+    "related_agents": ["STR-005", "STR-001"]
+  },
+
+  "STR-005": {
+    "title": "미션 선언문",
+    "title_en": "Mission Statement",
+    "definition": "이벤트의 존재 이유와 핵심 가치를 명문화합니다. 미션은 '왜 이 이벤트를 하는가'에 대한 답입니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 1: Goal Setting",
+    "pro_tip": "미션 선언문은 동사로 시작하세요. '연결한다', '영감을 준다', '변화를 만든다' 등 행동 지향적 표현이 팀에 에너지를 줍니다.",
+    "keywords": ["미션", "사명", "존재 이유", "가치"],
+    "related_agents": ["STR-004", "STR-052"]
+  },
+
+  "STR-006": {
+    "title": "목적 설정",
+    "title_en": "Objective Setting",
+    "definition": "비전과 미션을 구체적인 목적으로 세분화합니다. 각 목적은 측정 가능하고 시간 제한이 있어야 합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 1: Goal Setting",
+    "pro_tip": "OKR(Objectives and Key Results) 프레임워크를 활용하세요. 야심찬 목표(Objective)와 이를 증명할 3-5개의 핵심 결과(Key Results)를 정의합니다.",
+    "keywords": ["목적", "objective", "달성", "목표 설정"],
+    "related_agents": ["STR-001", "STR-043"]
+  },
+
+  "STR-007": {
+    "title": "목표 정렬",
+    "title_en": "Goal Alignment",
+    "definition": "설정된 여러 목표들이 서로 충돌하지 않고 조화롭게 연결되는지 확인합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 1: Goal Setting",
+    "pro_tip": "목표 간 Trade-off를 명시하세요. '참석자 증가'와 '참석자당 경험 품질'은 종종 충돌합니다. 우선순위를 미리 정해두세요.",
+    "keywords": ["정렬", "alignment", "일치", "연계"],
+    "related_agents": ["STR-045", "STR-042"]
+  },
+
+  "STR-008": {
+    "title": "성공 기준",
+    "title_en": "Success Criteria",
+    "definition": "이벤트 성공 여부를 판단할 구체적이고 측정 가능한 기준을 정의합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 1: Goal Setting",
+    "pro_tip": "정량적 기준(참석률, NPS 점수)과 정성적 기준(미디어 반응, 참석자 피드백)을 균형있게 포함하세요. 측정 방법도 함께 정의하세요.",
+    "keywords": ["성공 기준", "평가 기준", "달성 기준"],
+    "related_agents": ["STR-001", "STR-043", "STR-048"]
+  },
+
+  "STR-009": {
+    "title": "목표 우선순위",
+    "title_en": "Goal Prioritization",
+    "definition": "여러 목표 중 자원 제약 상황에서 어떤 목표를 먼저 달성해야 하는지 우선순위를 결정합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 1: Goal Setting",
+    "pro_tip": "MoSCoW 방법론을 활용하세요: Must-have(필수), Should-have(권장), Could-have(선택), Won't-have(제외). 예산 부족 시 어디를 먼저 자르는지 미리 정합니다.",
+    "keywords": ["우선순위", "priority", "중요도", "순서"],
+    "related_agents": ["STR-045", "FIN-054"]
+  },
+
+  "STR-010": {
+    "title": "마일스톤 정의",
+    "title_en": "Milestone Definition",
+    "definition": "이벤트 준비 과정의 주요 이정표를 정의합니다. 각 마일스톤은 완료 기준과 날짜가 명확해야 합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 1: Goal Setting",
+    "pro_tip": "마일스톤은 역산으로 설정하세요. D-day에서 출발해 D-7, D-30, D-90 기준으로 무엇이 완료되어야 하는지 정의합니다.",
+    "keywords": ["마일스톤", "중간 목표", "이정표", "체크포인트"],
+    "related_agents": ["STR-012", "STR-044"]
+  },
+
+  "STR-011": {
+    "title": "목표 커뮤니케이션",
+    "title_en": "Goal Communication",
+    "definition": "설정된 목표를 팀 전체와 이해관계자에게 효과적으로 전달하고 공유합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 1: Goal Setting",
+    "pro_tip": "목표는 한 번 전달하면 끝이 아닙니다. 매주 팀 미팅에서 '우리 목표'를 상기시키고, 진행상황과 연결지어 설명하세요.",
+    "keywords": ["목표 전달", "communication", "공유"],
+    "related_agents": ["STR-034", "STR-025"]
+  },
+
+  "STR-012": {
+    "title": "목표 추적",
+    "title_en": "Goal Tracking",
+    "definition": "설정된 목표의 달성 진행상황을 지속적으로 모니터링하고 추적합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 1: Goal Setting",
+    "pro_tip": "Leading Indicator(선행 지표)를 추적하세요. 등록자 수는 Lagging Indicator입니다. 웹사이트 방문자, 이메일 오픈율이 더 빠른 신호를 줍니다.",
+    "keywords": ["추적", "tracking", "모니터링", "진행 상황"],
+    "related_agents": ["STR-048", "STR-032"]
+  },
+
+  "STR-013": {
+    "title": "목표 검토",
+    "title_en": "Goal Review",
+    "definition": "이벤트 완료 후 또는 주기적으로 목표 달성 여부를 평가하고 교훈을 도출합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 1: Goal Setting",
+    "pro_tip": "Post-event Review는 이벤트 종료 후 2주 이내에 진행하세요. 시간이 지나면 감정은 희미해지고, 데이터만 남습니다. 둘 다 필요합니다.",
+    "keywords": ["검토", "review", "평가", "재검토"],
+    "related_agents": ["STR-049", "FIN-057"]
+  },
+
+  "STR-014": {
+    "title": "이해관계자 식별",
+    "title_en": "Stakeholder Identification",
+    "definition": "이벤트에 관련된 모든 이해관계자(내부/외부)를 체계적으로 식별합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 2: Stakeholder Analysis",
+    "pro_tip": "6개 카테고리로 시작하세요: 참석자, 스폰서, 발표자, 벤더, 내부 팀, 미디어. 각 카테고리에서 핵심 인물 3-5명을 먼저 식별합니다.",
+    "keywords": ["이해관계자 식별", "관계자 찾기"],
+    "related_agents": ["STR-002", "STR-015"]
+  },
+
+  "STR-015": {
+    "title": "이해관계자 매핑",
+    "title_en": "Stakeholder Mapping",
+    "definition": "식별된 이해관계자를 영향력과 관심도 기준으로 매트릭스에 배치합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 2: Stakeholder Analysis",
+    "pro_tip": "Power-Interest Grid를 사용하세요. 고위 경영진은 '만족시킬 것', 참석자는 '긴밀히 관리', 미디어는 '정보 제공' 전략을 적용합니다.",
+    "keywords": ["매핑", "매트릭스", "영향-관심"],
+    "related_agents": ["STR-014", "STR-016", "STR-021"]
+  },
+
+  "STR-016": {
+    "title": "이해관계자 우선순위",
+    "title_en": "Stakeholder Prioritization",
+    "definition": "한정된 자원으로 어떤 이해관계자에게 먼저 집중할지 우선순위를 결정합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 2: Stakeholder Analysis",
+    "pro_tip": "Urgency(긴급도)를 추가한 Salience Model을 고려하세요. 영향력+합법성+긴급도를 모두 갖춘 이해관계자가 최우선입니다.",
+    "keywords": ["이해관계자 우선순위", "중요 관계자"],
+    "related_agents": ["STR-015", "STR-017"]
+  },
+
+  "STR-017": {
+    "title": "이해관계자 참여",
+    "title_en": "Stakeholder Engagement",
+    "definition": "각 이해관계자 그룹에 맞는 참여 전략을 개발하고 실행합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 2: Stakeholder Analysis",
+    "pro_tip": "스폰서에게는 ROI 데이터를, 참석자에게는 경험 스토리를, 미디어에게는 뉴스 앵글을 제공하세요. 같은 정보도 포장이 다릅니다.",
+    "keywords": ["참여", "engagement", "관여", "협력"],
+    "related_agents": ["STR-018", "STR-020"]
+  },
+
+  "STR-018": {
+    "title": "기대 관리",
+    "title_en": "Expectation Management",
+    "definition": "이해관계자의 기대치를 파악하고, 현실적인 수준으로 조율합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 2: Stakeholder Analysis",
+    "pro_tip": "Under-promise, Over-deliver. 스폰서에게 1000명을 약속하고 800명이 오면 실패지만, 700명을 약속하고 800명이 오면 성공입니다.",
+    "keywords": ["기대 관리", "expectation", "요구사항"],
+    "related_agents": ["STR-017", "STR-022"]
+  },
+
+  "STR-019": {
+    "title": "갈등 해결",
+    "title_en": "Conflict Resolution",
+    "definition": "이해관계자 간 발생하는 갈등을 조기에 감지하고 효과적으로 해결합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 2: Stakeholder Analysis",
+    "pro_tip": "갈등의 80%는 커뮤니케이션 부족에서 시작합니다. 정기적인 1:1 미팅과 명확한 역할 정의가 갈등의 예방책입니다.",
+    "keywords": ["갈등", "conflict", "충돌", "해결", "조정"],
+    "related_agents": ["STR-024", "STR-020"]
+  },
+
+  "STR-020": {
+    "title": "관계 구축",
+    "title_en": "Relationship Building",
+    "definition": "핵심 이해관계자와의 신뢰 기반 관계를 구축하고 강화합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 2: Stakeholder Analysis",
+    "pro_tip": "이벤트가 없을 때도 연락하세요. 연간 2-3회 커피 미팅, 업계 뉴스 공유, 생일 축하 메시지가 관계를 유지합니다.",
+    "keywords": ["관계 구축", "relationship", "신뢰", "네트워킹"],
+    "related_agents": ["STR-017", "STR-023"]
+  },
+
+  "STR-021": {
+    "title": "영향력 분석",
+    "title_en": "Influence Analysis",
+    "definition": "조직 내외부에서 의사결정에 영향을 미치는 핵심 인물과 그 영향력 경로를 분석합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 2: Stakeholder Analysis",
+    "pro_tip": "공식적 직함과 실제 영향력은 다릅니다. '게이트키퍼'(의사결정자의 비서, 어시스턴트)의 중요성을 과소평가하지 마세요.",
+    "keywords": ["영향력 분석", "influence", "파워", "권한"],
+    "related_agents": ["STR-015", "STR-023"]
+  },
+
+  "STR-022": {
+    "title": "이해관계자 피드백",
+    "title_en": "Stakeholder Feedback",
+    "definition": "이해관계자로부터 체계적으로 피드백을 수집하고 분석합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 2: Stakeholder Analysis",
+    "pro_tip": "NPS(Net Promoter Score) 한 문항이면 충분할 때도 있습니다. '이 이벤트를 동료에게 추천하시겠습니까?' 점수와 이유만 물어보세요.",
+    "keywords": ["피드백", "feedback", "의견", "반응"],
+    "related_agents": ["STR-018", "STR-013"]
+  },
+
+  "STR-023": {
+    "title": "연합 구축",
+    "title_en": "Coalition Building",
+    "definition": "이벤트 성공을 위해 지지 세력을 조직하고 연합을 구축합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 2: Stakeholder Analysis",
+    "pro_tip": "'Early Adopter' 스폰서 1-2개를 먼저 확보하세요. 그들의 참여가 다른 스폰서를 끌어들이는 Social Proof가 됩니다.",
+    "keywords": ["연합", "coalition", "동맹", "지지"],
+    "related_agents": ["STR-020", "STR-021"]
+  },
+
+  "STR-024": {
+    "title": "협상 지원",
+    "title_en": "Negotiation Support",
+    "definition": "스폰서, 벤더, 장소 등과의 협상을 준비하고 전략을 수립합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 2: Stakeholder Analysis",
+    "pro_tip": "BATNA(Best Alternative To Negotiated Agreement)를 항상 준비하세요. 대안이 있으면 협상력이 높아집니다.",
+    "keywords": ["협상", "negotiation", "교섭", "타협"],
+    "related_agents": ["STR-019", "FIN-033"]
+  },
+
+  "STR-025": {
+    "title": "이해관계자 보고",
+    "title_en": "Stakeholder Reporting",
+    "definition": "각 이해관계자 그룹에 맞는 형식과 주기로 진행 상황을 보고합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 2: Stakeholder Analysis",
+    "pro_tip": "경영진은 1페이지 요약(Executive Summary), 실무진은 상세 데이터를 원합니다. 같은 보고서도 버전을 다르게 만드세요.",
+    "keywords": ["이해관계자 보고", "현황 보고"],
+    "related_agents": ["STR-011", "FIN-068"]
+  },
+
+  "STR-026": {
+    "title": "이해관계자 여정",
+    "title_en": "Stakeholder Journey",
+    "definition": "이해관계자가 이벤트와 상호작용하는 전체 여정을 설계하고 경험을 최적화합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 2: Stakeholder Analysis",
+    "pro_tip": "참석자 여정은 '인지-고려-등록-참석-후속'의 5단계로 나누세요. 각 단계에서 감정과 터치포인트를 매핑합니다.",
+    "keywords": ["여정", "journey", "경험", "터치포인트"],
+    "related_agents": ["STR-017", "FIN-043"]
+  },
+
+  "STR-027": {
+    "title": "리스크 식별",
+    "title_en": "Risk Identification",
+    "definition": "이벤트 계획 및 실행에 영향을 미칠 수 있는 모든 잠재적 위험 요소를 체계적으로 식별합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "PESTLE 분석으로 시작하세요: Political(정치), Economic(경제), Social(사회), Technological(기술), Legal(법), Environmental(환경).",
+    "keywords": ["리스크 식별", "risk identification", "위험 찾기"],
+    "related_agents": ["STR-003", "STR-028"]
+  },
+
+  "STR-028": {
+    "title": "리스크 평가",
+    "title_en": "Risk Assessment",
+    "definition": "식별된 리스크의 발생 가능성과 영향도를 정량적/정성적으로 평가합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "5x5 리스크 매트릭스를 사용하세요. 발생 가능성(1-5) x 영향도(1-5) = 리스크 점수. 15점 이상은 즉시 대응 필요입니다.",
+    "keywords": ["리스크 평가", "risk assessment", "위험 분석", "영향도"],
+    "related_agents": ["STR-027", "STR-029"]
+  },
+
+  "STR-029": {
+    "title": "리스크 우선순위",
+    "title_en": "Risk Prioritization",
+    "definition": "평가된 리스크를 심각도 기준으로 우선순위화하여 대응 순서를 결정합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "모든 리스크에 대응할 수 없습니다. Top 5 리스크에 80%의 에너지를 집중하세요. 나머지는 모니터링만 합니다.",
+    "keywords": ["리스크 우선순위", "risk priority", "중요 리스크"],
+    "related_agents": ["STR-028", "STR-030"]
+  },
+
+  "STR-030": {
+    "title": "리스크 완화",
+    "title_en": "Risk Mitigation",
+    "definition": "우선순위가 높은 리스크에 대한 완화 전략을 개발하고 실행합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "4T 전략을 적용하세요: Transfer(전가-보험), Tolerate(수용), Treat(처리-완화), Terminate(종료-회피). 각 리스크에 맞는 전략을 선택합니다.",
+    "keywords": ["완화", "mitigation", "대응", "저감"],
+    "related_agents": ["STR-029", "STR-031"]
+  },
+
+  "STR-031": {
+    "title": "비상 계획",
+    "title_en": "Contingency Planning",
+    "definition": "리스크가 현실화되었을 때 즉시 실행할 수 있는 대응 계획을 수립합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "Plan B는 Plan A의 70% 수준이면 충분합니다. 100% 대체안을 만들려다 시간을 낭비하지 마세요.",
+    "keywords": ["비상 계획", "contingency", "백업", "대안"],
+    "related_agents": ["STR-030", "FIN-035"]
+  },
+
+  "STR-032": {
+    "title": "리스크 모니터링",
+    "title_en": "Risk Monitoring",
+    "definition": "식별된 리스크의 상태 변화를 지속적으로 추적하고 새로운 리스크를 감지합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "주간 리스크 리뷰 미팅을 습관화하세요. 15분이면 충분합니다. 리스크 상태를 🔴🟡🟢 신호등으로 빠르게 점검합니다.",
+    "keywords": ["리스크 모니터링", "risk monitoring", "감시", "추적"],
+    "related_agents": ["STR-033", "STR-035"]
+  },
+
+  "STR-033": {
+    "title": "리스크 보고",
+    "title_en": "Risk Reporting",
+    "definition": "리스크 현황을 이해관계자에게 정기적으로 보고하고 투명하게 공유합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "나쁜 소식은 빨리 전하세요. 리스크가 현실화된 후에 보고하면 신뢰를 잃습니다. 'Early Warning'이 핵심입니다.",
+    "keywords": ["리스크 보고", "risk report", "현황 보고"],
+    "related_agents": ["STR-032", "STR-025"]
+  },
+
+  "STR-034": {
+    "title": "리스크 커뮤니케이션",
+    "title_en": "Risk Communication",
+    "definition": "리스크 정보를 관련자들에게 효과적으로 전달하고 인식을 공유합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "리스크 커뮤니케이션은 두려움이 아닌 준비됨을 전달해야 합니다. '문제가 있을 수 있다' 대신 '대비책이 있다'로 프레이밍하세요.",
+    "keywords": ["리스크 커뮤니케이션", "위험 전달", "공유"],
+    "related_agents": ["STR-033", "STR-011"]
+  },
+
+  "STR-035": {
+    "title": "리스크 검토",
+    "title_en": "Risk Review",
+    "definition": "주기적으로 리스크 등록부를 검토하고 상황 변화에 따라 재평가합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "D-30, D-7, D-1에 반드시 리스크 검토를 하세요. 이벤트가 가까워질수록 리스크 발생 가능성 평가가 더 정확해집니다.",
+    "keywords": ["리스크 검토", "risk review", "재평가"],
+    "related_agents": ["STR-032", "STR-028"]
+  },
+
+  "STR-036": {
+    "title": "리스크 거버넌스",
+    "title_en": "Risk Governance",
+    "definition": "리스크 관리의 역할, 책임, 의사결정 권한을 명확히 정의합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "RACI 매트릭스를 적용하세요: Responsible(실행), Accountable(책임), Consulted(자문), Informed(통보). 리스크별로 누가 결정권자인지 명확히 합니다.",
+    "keywords": ["리스크 거버넌스", "governance", "관리 체계", "의사결정"],
+    "related_agents": ["STR-030", "STR-034"]
+  },
+
+  "STR-037": {
+    "title": "보험 분석",
+    "title_en": "Insurance Analysis",
+    "definition": "이벤트에 필요한 보험 유형과 보장 범위를 분석하고 적절한 보험을 선택합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "이벤트 취소 보험, 일반 배상책임 보험, 장비 보험은 기본입니다. 대형 이벤트는 테러/전염병 특약도 고려하세요.",
+    "keywords": ["보험", "insurance", "보장", "커버리지"],
+    "related_agents": ["STR-030", "FIN-035"]
+  },
+
+  "STR-038": {
+    "title": "안전 리스크 관리",
+    "title_en": "Safety Risk Management",
+    "definition": "참석자와 스태프의 안전을 위협하는 리스크를 식별하고 관리합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "비상 대피 경로는 최소 2개 이상 확보하세요. 응급 의료진, AED 위치, 가장 가까운 병원 정보를 모든 스태프가 알아야 합니다.",
+    "keywords": ["안전", "safety", "사고", "재해"],
+    "related_agents": ["STR-031", "STR-027"]
+  },
+
+  "STR-039": {
+    "title": "벤더 리스크 평가",
+    "title_en": "Vendor Risk Assessment",
+    "definition": "공급업체의 신뢰성, 재정 안정성, 이행 능력 등을 평가합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "핵심 벤더에는 백업 벤더를 항상 준비하세요. AV 장비, 케이터링, 장소는 대체 불가능하면 위험합니다.",
+    "keywords": ["공급사 리스크", "vendor risk", "협력업체 위험"],
+    "related_agents": ["STR-028", "FIN-033"]
+  },
+
+  "STR-040": {
+    "title": "리스크 문화",
+    "title_en": "Risk Culture",
+    "definition": "팀 전체가 리스크를 인식하고 적극적으로 보고하는 문화를 조성합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 3: Risk Management",
+    "pro_tip": "리스크 보고를 칭찬하세요. '문제를 발견한 사람이 비난받는' 문화에서는 리스크가 숨겨집니다. 솔직함에 보상하세요.",
+    "keywords": ["리스크 문화", "risk culture", "인식", "태도"],
+    "related_agents": ["STR-034", "STR-036"]
+  },
+
+  "STR-041": {
+    "title": "전략 목표",
+    "title_en": "Strategic Objectives",
+    "definition": "Balanced Scorecard 등 프레임워크를 활용하여 다차원적 전략 목표를 수립합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 4: Strategic Alignment",
+    "pro_tip": "BSC의 4가지 관점을 적용하세요: 재무(수익성), 고객(만족도), 프로세스(효율성), 학습/성장(팀 역량). 균형 잡힌 목표가 지속 가능합니다.",
+    "keywords": ["전략 목표", "strategic objectives", "BSC", "밸런스드 스코어카드"],
+    "related_agents": ["STR-001", "STR-042"]
+  },
+
+  "STR-042": {
+    "title": "전략 맵",
+    "title_en": "Strategy Mapping",
+    "definition": "전략 목표 간의 인과관계를 시각화하고 전략 실행 로드맵을 작성합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 4: Strategic Alignment",
+    "pro_tip": "전략 맵은 아래에서 위로 읽습니다. '팀 역량 강화 → 프로세스 효율화 → 참석자 만족 → 수익 증가'의 논리적 연결을 보여주세요.",
+    "keywords": ["전략 맵", "strategy map", "인과관계", "연결"],
+    "related_agents": ["STR-041", "STR-044"]
+  },
+
+  "STR-043": {
+    "title": "KPI 설계",
+    "title_en": "KPI Design",
+    "definition": "전략 목표 달성을 측정할 핵심 성과 지표(KPI)를 설계합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 4: Strategic Alignment",
+    "pro_tip": "KPI는 5개 이하로 유지하세요. 너무 많으면 집중력이 분산됩니다. 각 KPI에는 목표치, 측정 방법, 측정 주기가 명확해야 합니다.",
+    "keywords": ["KPI 설계", "지표 설계", "측정", "대시보드"],
+    "related_agents": ["STR-001", "STR-008", "STR-048"]
+  },
+
+  "STR-044": {
+    "title": "이니셔티브 계획",
+    "title_en": "Initiative Planning",
+    "definition": "전략 목표를 달성하기 위한 구체적인 실행 프로젝트와 이니셔티브를 계획합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 4: Strategic Alignment",
+    "pro_tip": "각 이니셔티브에 Owner를 지정하세요. 주인 없는 프로젝트는 표류합니다. 책임과 권한을 함께 부여하세요.",
+    "keywords": ["이니셔티브", "initiative", "실행 계획", "프로젝트"],
+    "related_agents": ["STR-042", "STR-010"]
+  },
+
+  "STR-045": {
+    "title": "자원 정렬",
+    "title_en": "Resource Alignment",
+    "definition": "전략 우선순위에 따라 인력, 예산, 시간 등 자원을 배분합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 4: Strategic Alignment",
+    "pro_tip": "전략적 우선순위와 예산 배분이 일치하는지 확인하세요. 말로는 '경험 품질'을 강조하면서 예산의 80%가 장소비에 가면 모순입니다.",
+    "keywords": ["자원 정렬", "resource alignment", "배분", "할당"],
+    "related_agents": ["STR-009", "FIN-031", "FIN-054"]
+  },
+
+  "STR-046": {
+    "title": "역량 평가",
+    "title_en": "Capability Assessment",
+    "definition": "이벤트 실행에 필요한 역량과 현재 보유 역량 간의 Gap을 분석합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 4: Strategic Alignment",
+    "pro_tip": "Build(육성) vs Buy(채용) vs Partner(외주) 결정을 내리세요. 모든 역량을 내부에서 갖출 필요는 없습니다. 핵심 역량만 내재화하세요.",
+    "keywords": ["역량 평가", "capability", "능력", "강점 약점"],
+    "related_agents": ["STR-045", "STR-047"]
+  },
+
+  "STR-047": {
+    "title": "변화 관리",
+    "title_en": "Change Management",
+    "definition": "이벤트 준비 과정에서 발생하는 변화에 대한 저항을 관리하고 수용을 촉진합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 4: Strategic Alignment",
+    "pro_tip": "변화의 'Why'를 먼저 설명하세요. 사람들은 변화 자체보다 '왜 바꿔야 하는지'를 이해하지 못할 때 저항합니다.",
+    "keywords": ["변화 관리", "change management", "변경", "전환"],
+    "related_agents": ["STR-011", "STR-017"]
+  },
+
+  "STR-048": {
+    "title": "성과 모니터링",
+    "title_en": "Performance Monitoring",
+    "definition": "설정된 KPI의 달성 현황을 실시간으로 모니터링하고 대시보드로 시각화합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 4: Strategic Alignment",
+    "pro_tip": "자동화된 대시보드를 구축하세요. 매번 수작업으로 데이터를 모으면 주간 리뷰가 고통이 됩니다. Google Data Studio, Notion 등을 활용하세요.",
+    "keywords": ["성과 모니터링", "performance monitoring", "KPI 추적"],
+    "related_agents": ["STR-043", "STR-012"]
+  },
+
+  "STR-049": {
+    "title": "전략 검토",
+    "title_en": "Strategic Review",
+    "definition": "전략의 효과성을 정기적으로 평가하고 필요시 수정합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 4: Strategic Alignment",
+    "pro_tip": "월간 전략 리뷰를 권장합니다. 분기별로는 너무 늦고, 주간으로는 너무 빠릅니다. 환경 변화에 적절히 대응할 수 있는 주기입니다.",
+    "keywords": ["전략 검토", "strategic review", "평가", "효과성"],
+    "related_agents": ["STR-013", "STR-050"]
+  },
+
+  "STR-050": {
+    "title": "전략 적응",
+    "title_en": "Strategy Adaptation",
+    "definition": "환경 변화에 따라 전략을 유연하게 수정하고 피벗합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 4: Strategic Alignment",
+    "pro_tip": "사전에 'Pivot Triggers'를 정의하세요. '등록률이 목표의 50% 이하면 가격 조정', '주요 스폰서 이탈 시 규모 축소' 등 미리 결정해두세요.",
+    "keywords": ["전략 적응", "adaptation", "조정", "피벗"],
+    "related_agents": ["STR-049", "FIN-041"]
+  },
+
+  "STR-051": {
+    "title": "벤치마크 분석",
+    "title_en": "Benchmark Analysis",
+    "definition": "유사 이벤트나 업계 Best Practice와 비교하여 개선 기회를 발굴합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 4: Strategic Alignment",
+    "pro_tip": "3가지 유형의 벤치마크를 하세요: 내부(과거 이벤트), 경쟁(동종 이벤트), 기능(다른 업계 Best Practice). 다양한 시각이 혁신을 낳습니다.",
+    "keywords": ["벤치마크", "benchmark", "비교", "베스트 프랙티스"],
+    "related_agents": ["STR-049", "FIN-044"]
+  },
+
+  "STR-052": {
+    "title": "가치 제안",
+    "title_en": "Value Proposition",
+    "definition": "이벤트가 참석자에게 제공하는 고유한 가치와 차별점을 명확히 정의합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 4: Strategic Alignment",
+    "pro_tip": "Value Proposition Canvas를 활용하세요. 참석자의 Jobs(할 일), Pains(고충), Gains(얻고 싶은 것)를 분석하고, 이벤트가 이를 어떻게 해결하는지 매핑합니다.",
+    "keywords": ["가치 제안", "value proposition", "차별화", "USP"],
+    "related_agents": ["STR-005", "FIN-043"]
+  },
+
+  "STR-053": {
+    "title": "시나리오 플래닝",
+    "title_en": "Scenario Planning",
+    "definition": "다양한 미래 시나리오를 가정하고 각 상황에 대한 대응 전략을 수립합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 4: Strategic Alignment",
+    "pro_tip": "3가지 시나리오를 준비하세요: Best Case(150%), Base Case(100%), Worst Case(50%). 각 시나리오의 Trigger Point와 대응 전략을 미리 정의합니다.",
+    "keywords": ["시나리오 플래닝", "scenario", "미래 예측", "what-if"],
+    "related_agents": ["STR-050", "FIN-041"]
+  },
+
+  "STR-054": {
+    "title": "전략 통합",
+    "title_en": "Strategic Integration",
+    "definition": "여러 부서와 팀의 전략을 조율하고 시너지를 창출합니다.",
+    "cmp_ref": "Domain A: Strategic Planning, Skill 4: Strategic Alignment",
+    "pro_tip": "Cross-functional 회의를 정기적으로 하세요. 마케팅, 운영, 재무가 각자의 언어로 이야기하면 갈등이 생깁니다. 공통 목표 언어를 만드세요.",
+    "keywords": ["전략 통합", "integration", "조정", "시너지"],
+    "related_agents": ["STR-007", "STR-045"]
+  },
+
+  "FIN-001": {
+    "title": "스폰서십 프로그램 가치 산정",
+    "title_en": "Sponsorship Program Financial Valuation",
+    "definition": "스폰서십 패키지의 재정적 가치를 산정합니다. 노출 가치, 브랜드 가치, 네트워킹 가치 등을 종합적으로 평가합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 7: Manage Event Funding",
+    "pro_tip": "IEG Valuation Formula를 참고하세요. 로고 노출 면적 × 노출 시간 × 참석자 수 × CPM으로 기본 가치를 계산한 후, 프리미엄을 더합니다.",
+    "keywords": ["스폰서십", "가치", "산정", "평가", "sponsorship"],
+    "related_agents": ["FIN-002", "FIN-016"]
+  },
+
+  "FIN-002": {
+    "title": "스폰서 혜택 비용 추정",
+    "title_en": "Sponsor Benefit Cost Estimation",
+    "definition": "스폰서에게 제공하는 각 혜택 항목의 원가를 추정합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 7: Manage Event Funding",
+    "pro_tip": "혜택 비용은 스폰서십 가격의 30% 이하로 유지하세요. 70% 이상이 마진이어야 스폰서십 프로그램이 수익성이 있습니다.",
+    "keywords": ["스폰서", "혜택", "비용", "추정"],
+    "related_agents": ["FIN-001", "FIN-006"]
+  },
+
+  "FIN-003": {
+    "title": "스폰서십 승인 획득",
+    "title_en": "Stakeholder Sponsorship Approval",
+    "definition": "이해관계자로부터 스폰서십 프로그램에 대한 공식 승인을 획득합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 7: Manage Event Funding",
+    "pro_tip": "승인 요청 시 ROI 예측 데이터를 함께 제시하세요. '스폰서십 목표 5000만원, 예상 비용 1500만원, 예상 순이익 3500만원'처럼 숫자로 설득합니다.",
+    "keywords": ["스폰서십", "승인", "결재", "approval"],
+    "related_agents": ["FIN-001", "STR-025"]
+  },
+
+  "FIN-005": {
+    "title": "잠재 스폰서 후보 식별",
+    "title_en": "Potential Sponsor Identification",
+    "definition": "이벤트 특성에 맞는 잠재적 스폰서 기업을 식별합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 7: Manage Event Funding",
+    "pro_tip": "참석자 프로파일과 스폰서의 Target Audience가 일치하는지 확인하세요. B2B 컨퍼런스에 B2C 브랜드는 맞지 않습니다.",
+    "keywords": ["스폰서", "후보", "잠재", "식별", "prospect"],
+    "related_agents": ["FIN-006", "STR-014"]
+  },
+
+  "FIN-006": {
+    "title": "스폰서 적합성 분석",
+    "title_en": "Sponsor Fit Analysis",
+    "definition": "잠재 스폰서가 이벤트와 얼마나 적합한지 다각도로 분석합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 7: Manage Event Funding",
+    "pro_tip": "Brand Alignment Score를 만드세요. 타겟 일치도(30%), 브랜드 이미지 적합성(25%), 예산 적합성(25%), 과거 협력 이력(20%)으로 점수화합니다.",
+    "keywords": ["스폰서", "적합", "분석", "fit", "매칭"],
+    "related_agents": ["FIN-005", "FIN-001"]
+  },
+
+  "FIN-016": {
+    "title": "스폰서 ROI 평가",
+    "title_en": "Sponsor ROI Evaluation",
+    "definition": "스폰서의 투자 대비 수익을 정량적으로 평가합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 7: Manage Event Funding",
+    "pro_tip": "스폰서 관점의 ROI를 계산하세요: (스폰서가 얻은 가치 - 스폰서십 비용) / 스폰서십 비용 × 100. 이 데이터가 내년 스폰서십 갱신의 열쇠입니다.",
+    "keywords": ["ROI", "투자수익", "스폰서", "성과"],
+    "related_agents": ["FIN-001", "STR-013"]
+  },
+
+  "FIN-017": {
+    "title": "등록 재정 목표 설정",
+    "title_en": "Registration Financial Goals",
+    "definition": "참가비 수익에 대한 재정 목표를 설정합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 7: Manage Event Funding",
+    "pro_tip": "등록 수익은 전체 수익의 40-60%를 목표로 하세요. 스폰서십 의존도가 너무 높으면 리스크가 커집니다.",
+    "keywords": ["등록", "재정", "목표", "registration", "revenue"],
+    "related_agents": ["FIN-043", "STR-001"]
+  },
+
+  "FIN-022": {
+    "title": "전시 잠재 고객 식별",
+    "title_en": "Exhibition Prospect Identification",
+    "definition": "부스 전시에 참여할 잠재적 전시사를 식별합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 7: Manage Event Funding",
+    "pro_tip": "참석자의 구매 결정력을 강조하세요. '참석자의 70%가 구매 의사결정자'라는 데이터가 전시사 유치에 강력합니다.",
+    "keywords": ["전시", "전시사", "exhibitor", "부스"],
+    "related_agents": ["FIN-026", "FIN-005"]
+  },
+
+  "FIN-026": {
+    "title": "전시 수익 예측",
+    "title_en": "Exhibition Revenue Forecast",
+    "definition": "전시 공간 판매로 예상되는 수익을 예측합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 7: Manage Event Funding",
+    "pro_tip": "전시 공간 판매율은 70%를 기준으로 잡으세요. 100% 판매를 가정한 예측은 위험합니다. 조기 할인으로 60% 이상 사전 확보가 안전합니다.",
+    "keywords": ["전시", "수익", "예측", "exhibition", "forecast"],
+    "related_agents": ["FIN-022", "FIN-036"]
+  },
+
+  "FIN-027": {
+    "title": "추가 수익원 식별",
+    "title_en": "Additional Revenue Stream Identification",
+    "definition": "등록비, 스폰서십, 전시 외 추가 수익을 창출할 기회를 발굴합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 7: Manage Event Funding",
+    "pro_tip": "디지털 자산을 활용하세요: 녹화 영상 판매, 온라인 네트워킹 플랫폼 프리미엄, 스피커 매칭 서비스 등이 새로운 수익원이 됩니다.",
+    "keywords": ["수익원", "추가", "다각화", "revenue stream"],
+    "related_agents": ["FIN-030", "FIN-029"]
+  },
+
+  "FIN-029": {
+    "title": "F&B 수익 최적화",
+    "title_en": "F&B Revenue Optimization",
+    "definition": "식음료 서비스에서 수익을 최적화합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 7: Manage Event Funding",
+    "pro_tip": "F&B 업그레이드 옵션을 판매하세요. 기본 패키지에 점심 포함, 프리미엄 패키지에 VIP 디너 포함 등 티어를 나눕니다.",
+    "keywords": ["F&B", "식음료", "케이터링", "catering"],
+    "related_agents": ["FIN-027", "FIN-043"]
+  },
+
+  "FIN-030": {
+    "title": "콘텐츠 수익화",
+    "title_en": "Content Monetization",
+    "definition": "이벤트 콘텐츠(세션 녹화, 발표 자료 등)를 수익화합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 7: Manage Event Funding",
+    "pro_tip": "On-demand 콘텐츠는 이벤트 후 6개월까지 판매하세요. 연간 구독 모델로 지속적 수익을 창출할 수도 있습니다.",
+    "keywords": ["콘텐츠", "수익화", "monetization", "유료"],
+    "related_agents": ["FIN-027", "STR-052"]
+  },
+
+  "FIN-031": {
+    "title": "예산 구조 설계",
+    "title_en": "Budget Structure Design",
+    "definition": "이벤트 예산의 전체 구조와 카테고리를 설계합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "예산을 5-7개 주요 카테고리로 나누세요: 장소/시설, 마케팅, 프로그램, F&B, 인력, 기술, 예비비. 너무 세분화하면 관리가 어렵습니다.",
+    "keywords": ["예산", "구조", "설계", "budget", "structure"],
+    "related_agents": ["FIN-034", "STR-045"]
+  },
+
+  "FIN-032": {
+    "title": "과거 비용 분석",
+    "title_en": "Historical Cost Analysis",
+    "definition": "과거 유사 이벤트의 비용 데이터를 분석하여 예산 수립에 참고합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "인플레이션과 규모 변화를 반영하세요. 작년 비용에 5-10%를 더하는 것은 너무 단순합니다. 항목별로 실제 가격 변동을 확인하세요.",
+    "keywords": ["과거", "비용", "분석", "historical", "cost"],
+    "related_agents": ["FIN-031", "STR-051"]
+  },
+
+  "FIN-033": {
+    "title": "공급사 견적 수집",
+    "title_en": "Vendor Quote Collection",
+    "definition": "주요 공급업체로부터 견적을 수집하고 비교합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "최소 3개 업체 견적을 받으세요. 가격뿐 아니라 서비스 범위, 결제 조건, 취소 정책도 비교하세요.",
+    "keywords": ["견적", "공급사", "벤더", "quote", "vendor"],
+    "related_agents": ["STR-039", "STR-024"]
+  },
+
+  "FIN-034": {
+    "title": "예산 항목 상세화",
+    "title_en": "Budget Line Item Detail",
+    "definition": "예산의 각 항목을 세부 내역으로 상세화합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "숨겨진 비용을 놓치지 마세요: 배송비, 설치비, 초과 근무 수당, 세금, 팁 등이 예산의 10-15%를 차지할 수 있습니다.",
+    "keywords": ["예산", "항목", "세부", "line item", "detail"],
+    "related_agents": ["FIN-031", "FIN-035"]
+  },
+
+  "FIN-035": {
+    "title": "예비비 계획",
+    "title_en": "Contingency Planning",
+    "definition": "예상치 못한 비용에 대비한 예비비를 계획합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "첫 회 이벤트는 총 예산의 15-20%, 반복 이벤트는 10%를 예비비로 확보하세요. 예비비는 D-30까지 사용하지 않는 것이 원칙입니다.",
+    "keywords": ["예비비", "contingency", "여유", "reserve"],
+    "related_agents": ["STR-031", "FIN-034"]
+  },
+
+  "FIN-036": {
+    "title": "수익 예측",
+    "title_en": "Revenue Projection",
+    "definition": "다양한 수익원별 예상 수익을 예측합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "낙관적 예측이 아닌 보수적 예측을 기준으로 하세요. 등록률 80%, 스폰서십 달성률 70%를 가정하면 안전합니다.",
+    "keywords": ["수익", "예측", "forecast", "projection", "매출"],
+    "related_agents": ["FIN-037", "FIN-017"]
+  },
+
+  "FIN-037": {
+    "title": "손익분기점 분석",
+    "title_en": "Break-Even Analysis",
+    "definition": "수익과 비용이 같아지는 손익분기점을 계산합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "고정비와 변동비를 구분하세요. 손익분기 참석자 수 = 고정비 / (참가비 - 인당 변동비). 이 숫자가 목표 참석자의 60% 이하여야 안전합니다.",
+    "keywords": ["손익분기", "BEP", "break-even", "흑자", "적자"],
+    "related_agents": ["FIN-036", "FIN-041"]
+  },
+
+  "FIN-038": {
+    "title": "현금흐름 예측",
+    "title_en": "Cash Flow Projection",
+    "definition": "이벤트 준비 기간 동안의 현금 유입과 유출을 예측합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "대부분의 비용은 이벤트 전에 발생하고, 수익은 후에 들어옵니다. 선결제 요청, 얼리버드 할인으로 현금흐름 Gap을 줄이세요.",
+    "keywords": ["현금흐름", "cash flow", "자금", "유동성"],
+    "related_agents": ["FIN-036", "FIN-064"]
+  },
+
+  "FIN-041": {
+    "title": "시나리오 예산 플래닝",
+    "title_en": "Scenario Budget Planning",
+    "definition": "다양한 시나리오(최선/기준/최악)별 예산을 계획합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "각 시나리오에 Trigger를 정의하세요. 'D-60에 등록률 40% 미만이면 Worst Case 예산 적용'처럼 객관적 기준을 미리 정합니다.",
+    "keywords": ["시나리오", "scenario", "최악", "최선", "가정"],
+    "related_agents": ["STR-053", "FIN-037"]
+  },
+
+  "FIN-043": {
+    "title": "가격 책정 전략",
+    "title_en": "Pricing Strategy Development",
+    "definition": "참가비, 부스비 등의 가격 책정 전략을 개발합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "3-Tier 가격 구조를 권장합니다: Basic(최저가, 기본 혜택), Standard(중간가, 대부분 선택), Premium(최고가, VIP 혜택). 대부분 Standard를 선택합니다.",
+    "keywords": ["가격", "책정", "pricing", "참가비", "티켓"],
+    "related_agents": ["FIN-044", "FIN-045"]
+  },
+
+  "FIN-044": {
+    "title": "경쟁사 가격 분석",
+    "title_en": "Competitor Price Analysis",
+    "definition": "유사 이벤트의 가격을 분석하여 시장 포지셔닝을 결정합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "가격만 비교하지 마세요. 포함 사항(식사, 네트워킹, 자료)과 참석자 프로필도 함께 비교해야 공정한 비교가 됩니다.",
+    "keywords": ["경쟁사", "가격", "비교", "competitor", "benchmark"],
+    "related_agents": ["FIN-043", "STR-051"]
+  },
+
+  "FIN-045": {
+    "title": "할인 정책 설계",
+    "title_en": "Discount Policy Design",
+    "definition": "얼리버드, 그룹 할인 등 할인 정책을 설계합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "할인 총액을 미리 정하세요. 얼리버드 20%, 그룹(5인 이상) 15%, VIP 코드 10%를 중복 적용하면 마진이 사라집니다. 중복 불가 정책이 필요합니다.",
+    "keywords": ["할인", "discount", "얼리버드", "그룹", "early bird"],
+    "related_agents": ["FIN-043", "FIN-046"]
+  },
+
+  "FIN-046": {
+    "title": "동적 가격 규칙",
+    "title_en": "Dynamic Pricing Rules",
+    "definition": "수요에 따라 가격이 변동하는 동적 가격 규칙을 설정합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "항공사 모델을 참고하세요: 조기 예약 할인 → 정상가 → 마감 임박 프리미엄. 단, 복잡한 가격 체계는 혼란을 줄 수 있으니 주의하세요.",
+    "keywords": ["동적", "dynamic", "가격", "변동", "surge"],
+    "related_agents": ["FIN-045", "FIN-043"]
+  },
+
+  "FIN-048": {
+    "title": "환불 정책 생성",
+    "title_en": "Refund Policy Creation",
+    "definition": "취소 및 환불에 관한 정책을 수립합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "단계적 환불 정책을 권장합니다: D-30 이전 100% 환불, D-14 이전 50%, D-7 이후 환불 불가. 단, 크레딧으로 전환하는 옵션을 제공하세요.",
+    "keywords": ["환불", "취소", "refund", "cancellation"],
+    "related_agents": ["FIN-060", "FIN-065"]
+  },
+
+  "FIN-052": {
+    "title": "실제 vs 예산 분석",
+    "title_en": "Actual vs Budget Analysis",
+    "definition": "실제 지출을 예산과 비교하고 차이를 분석합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "주간 예산 리뷰를 습관화하세요. 차이가 10% 이상이면 즉시 원인을 파악하고 대응하세요. 이벤트 후에 분석하면 너무 늦습니다.",
+    "keywords": ["실제", "actual", "예산", "비교", "variance"],
+    "related_agents": ["FIN-054", "STR-048"]
+  },
+
+  "FIN-054": {
+    "title": "예산 재배분",
+    "title_en": "Budget Reallocation",
+    "definition": "상황 변화에 따라 예산을 항목 간 재배분합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "재배분 시 승인 절차를 명확히 하세요. 10% 이하는 PM 재량, 10-20%는 팀장 승인, 20% 이상은 경영진 승인 등 기준을 정합니다.",
+    "keywords": ["재배분", "조정", "reallocation", "이동"],
+    "related_agents": ["FIN-052", "STR-009"]
+  },
+
+  "FIN-056": {
+    "title": "비용 통제 조치",
+    "title_en": "Cost Control Measures",
+    "definition": "예산 초과를 방지하기 위한 비용 통제 조치를 시행합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "협상 가능한 항목을 파악하세요: 장소 사용 시간 축소, F&B 메뉴 단순화, 인쇄물 디지털화 등으로 품질 저하 없이 비용을 줄일 수 있습니다.",
+    "keywords": ["비용", "통제", "절감", "cost control", "saving"],
+    "related_agents": ["FIN-052", "FIN-054"]
+  },
+
+  "FIN-057": {
+    "title": "이벤트 후 재무 정산",
+    "title_en": "Post-Event Financial Settlement",
+    "definition": "이벤트 완료 후 모든 재무 거래를 마감하고 정산합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 8: Manage Budget",
+    "pro_tip": "이벤트 후 30일 이내에 정산을 완료하세요. 시간이 지나면 미수금 회수가 어려워지고, 벤더 분쟁도 복잡해집니다.",
+    "keywords": ["정산", "마감", "결산", "post-event", "settlement"],
+    "related_agents": ["STR-013", "FIN-068"]
+  },
+
+  "FIN-058": {
+    "title": "결제 시스템 설정",
+    "title_en": "Payment Processing Setup",
+    "definition": "온라인 결제 수단과 처리 시스템을 설정합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 9: Manage Monetary Transactions",
+    "pro_tip": "PG 수수료를 비교하세요. 카드 결제는 2.5-3.5% 수수료가 일반적입니다. 대량 거래 시 협상 가능합니다.",
+    "keywords": ["결제", "payment", "시스템", "PG", "카드"],
+    "related_agents": ["FIN-064", "FIN-062"]
+  },
+
+  "FIN-060": {
+    "title": "환불 정책 구현",
+    "title_en": "Refund Policy Implementation",
+    "definition": "수립된 환불 정책을 시스템에 구현합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 9: Manage Monetary Transactions",
+    "pro_tip": "자동화된 환불 시스템을 구축하세요. 수동 환불은 시간이 오래 걸리고 오류가 발생합니다. 등록 시스템과 연동하세요.",
+    "keywords": ["환불", "구현", "처리", "refund", "process"],
+    "related_agents": ["FIN-048", "FIN-065"]
+  },
+
+  "FIN-062": {
+    "title": "세금 준수 설정",
+    "title_en": "Tax Compliance Setup",
+    "definition": "부가세 등 세금 관련 설정을 합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 9: Manage Monetary Transactions",
+    "pro_tip": "국제 참석자가 있다면 세금 면제 절차를 미리 확인하세요. 국가별로 부가세 처리 방식이 다릅니다.",
+    "keywords": ["세금", "tax", "VAT", "부가세", "compliance"],
+    "related_agents": ["FIN-058", "FIN-066"]
+  },
+
+  "FIN-064": {
+    "title": "결제 처리",
+    "title_en": "Payment Processing",
+    "definition": "등록비, 스폰서십비 등 결제를 처리합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 9: Manage Monetary Transactions",
+    "pro_tip": "결제 실패율을 모니터링하세요. 10% 이상이면 시스템 문제일 수 있습니다. 실패한 결제에 대한 재시도 이메일을 자동 발송하세요.",
+    "keywords": ["결제", "수납", "payment", "수금"],
+    "related_agents": ["FIN-058", "FIN-067"]
+  },
+
+  "FIN-065": {
+    "title": "환불 처리",
+    "title_en": "Refund Processing",
+    "definition": "요청된 환불을 정책에 따라 처리합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 9: Manage Monetary Transactions",
+    "pro_tip": "환불 처리 기한을 공지하세요. '영업일 기준 5-7일 소요'처럼 명확히 하면 불필요한 문의를 줄일 수 있습니다.",
+    "keywords": ["환불", "처리", "refund", "돌려주다"],
+    "related_agents": ["FIN-060", "FIN-048"]
+  },
+
+  "FIN-066": {
+    "title": "인보이스 생성",
+    "title_en": "Invoice Generation",
+    "definition": "스폰서, 전시사 등에게 청구서를 발행합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 9: Manage Monetary Transactions",
+    "pro_tip": "인보이스에 결제 조건(Net 30 등), 은행 정보, 담당자 연락처를 명확히 기재하세요. 분할 결제 조건도 명시합니다.",
+    "keywords": ["인보이스", "청구서", "invoice", "bill"],
+    "related_agents": ["FIN-067", "FIN-062"]
+  },
+
+  "FIN-067": {
+    "title": "수금 관리",
+    "title_en": "Collection Management",
+    "definition": "미수금을 추적하고 수금 활동을 관리합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 9: Manage Monetary Transactions",
+    "pro_tip": "수금 단계를 정의하세요: D+7 리마인더 → D+14 전화 → D+30 경고 → D+60 법적 조치 검토. 단계별 담당자와 스크립트를 준비하세요.",
+    "keywords": ["수금", "미수", "collection", "receivable"],
+    "related_agents": ["FIN-066", "FIN-064"]
+  },
+
+  "FIN-068": {
+    "title": "재무 보고",
+    "title_en": "Financial Reporting",
+    "definition": "이해관계자에게 재무 현황을 보고합니다.",
+    "cmp_ref": "Domain D: Financial Management, Skill 9: Manage Monetary Transactions",
+    "pro_tip": "대시보드 형태의 보고서를 만드세요: 수익 현황, 비용 현황, 현금흐름, 예산 대비 차이를 한 페이지에 시각화합니다.",
+    "keywords": ["재무", "보고", "report", "리포트", "보고서"],
+    "related_agents": ["STR-025", "FIN-057"]
+  }
+}

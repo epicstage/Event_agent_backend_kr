@@ -1,0 +1,59 @@
+### CHAPTER 11: Technology and the Meeting Professional 353
+
+- **Introduction** 354
+- **Virtual Site Selection and Research** 355
+  - Online RFPs 355
+  - Virtual Tours 356
+  - Meeting Industry Portals and Information Resources 357
+- **Marketing and Communications** 359
+  - Websites and Strategic Communications 359
+  - Event Websites 360
+  - Mobile Websites 361
+  - E-Blasts 362
+  - Video Marketing 364
+  - Room Design Software 364
+  - Selling the Show Floor 365
+  - Online Registration 365
+- **Social Media** 366
+  - Primary Social Channels 366
+  - Livestreaming 368
+  - Blogging 369
+  - Podcasting 370
+  - Hashtags 370
+  - Social Selling 371
+- **Event Apps** 372
+- **Desktop and Mobile Tools** 373
+  - Accepted Practices Exchange (APEX) 374
+  - Virtual Trade Shows 374
+- **On-Site Event Tech Infrastructure** 374
+  - Facial Recognition at On-Site Registration 375
+  - Bandwidth 376
+  - Wired Versus Wireless 377
+  - Streaming Media 378
+  - Digital Recordings of Sessions 379
+  - Drones 380
+- **Attendee Interaction and Communications** 380
+  - Beacons 381
+  - Near Field Communications (NFC) and Radio Frequency Identification (RFID) 381
+  - Lead Retrieval Systems 382
+  - Audience Response Systems (ARSs) and Speaker Interaction 382
+- **Postconference Technology Applications** 383
+  - Evaluations and Surveys 383
+  - Marketing the Media 384
+- **Mixed Reality** 385
+  - AR 386
+  - Virtual Reality/360° Videos 387
+- **AI** 388
+  - ChatGPT 390
+  - AI, Chat GPT, and Hospitality 391
+- **Virtual and Hybrid Meetings** 392
+  - Hybrid Meetings 392
+  - Online Meetings and Webinars 393
+  - Large-Scale Virtual Meetings 394
+- **The Roaring Tech Twenties** 395
+- **Summary** 397
+- Key Words and Terms 398
+- About the Chapter Contributor 398
+
+---
+

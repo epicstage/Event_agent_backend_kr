@@ -1,0 +1,21 @@
+{
+  "name": "event-agent-api",
+  "version": "0.1.0",
+  "description": "AI-Native Event Agent System based on CMP-IS, EMBOK, APEX standards",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "hono": "^4.6.0",
+    "zod": "^3.23.0",
+    "@hono/zod-validator": "^0.4.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "typescript": "^5.6.0",
+    "wrangler": "^3.93.0"
+  }
+}

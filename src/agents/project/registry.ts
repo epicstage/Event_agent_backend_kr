@@ -47,6 +47,7 @@ import PRJ_037_StakeholderSignoff from "./skill6/PRJ_037_StakeholderSignoff";
 import PRJ_038_FinancialClosure from "./skill6/PRJ_038_FinancialClosure";
 import PRJ_039_CelebrationRecognition from "./skill6/PRJ_039_CelebrationRecognition";
 import PRJ_040_ProjectClosure from "./skill6/PRJ_040_ProjectClosure";
+import PRJ_041_ScheduleShift from "./skill6/PRJ_041_ScheduleShift";
 
 export const PROJECT_AGENTS = {
   // Skill 5: Plan Project
@@ -92,6 +93,7 @@ export const PROJECT_AGENTS = {
   "PRJ-038": PRJ_038_FinancialClosure,
   "PRJ-039": PRJ_039_CelebrationRecognition,
   "PRJ-040": PRJ_040_ProjectClosure,
+  "PRJ-041": PRJ_041_ScheduleShift,
 };
 
 export const PROJECT_AGENT_LIST = Object.entries(PROJECT_AGENTS).map(([taskId, agent]) => ({
@@ -132,11 +134,11 @@ export const PROJECT_DOMAIN = {
       id: "6",
       name: "Manage Project",
       nameKo: "프로젝트 관리",
-      agentCount: 27,
-      taskIdRange: "PRJ-014 ~ PRJ-040",
+      agentCount: 28,
+      taskIdRange: "PRJ-014 ~ PRJ-041",
     },
   ],
-  totalAgents: 40,
+  totalAgents: 41,
   prefix: "PRJ",
 };
 

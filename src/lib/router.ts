@@ -1231,6 +1231,21 @@ const AGENT_CATALOG: AgentMetadata[] = [
     keywords: ["프로젝트 종료", "project close", "클로징", "마무리"],
     intentPatterns: ["프로젝트를 종료하고 싶다", "공식적으로 끝내고 싶다"],
   },
+  {
+    taskId: "PRJ-041",
+    taskName: "일정 일괄 조정",
+    domain: "project",
+    keywords: ["일정 조정", "미루기", "연기", "앞당기기", "당기기", "shift", "reschedule", "전체 일정", "일괄"],
+    intentPatterns: [
+      "일정을 미루고 싶다",
+      "전체 일정을 연기해줘",
+      "모든 일정을 당겨줘",
+      "2일 미뤄줘",
+      "일정을 앞당기고 싶다",
+      "D-Day가 변경됐어",
+      "전체적으로 다 미워줘",
+    ],
+  },
 
   // ============ MARKETING DOMAIN - Skill 7: Plan Marketing (MKT-001~015) ============
   {
@@ -3162,13 +3177,14 @@ You MUST return "out_of_scope" domain with taskId "NONE".
 **Skill 4: Strategic Alignment (STR-041~054)**
 - STR-041~054: 전략 목표(BSC), KPI 설계, 변화 관리, 벤치마크, 시나리오 플래닝
 
-### Project Domain (PRJ-001~040) - CMP-IS Domain B: Project Management
+### Project Domain (PRJ-001~041) - CMP-IS Domain B: Project Management
 **Skill 5: Plan Project (PRJ-001~013)**
 - PRJ-001~013: 일정 수립, 자원 계획, 범위 정의, WBS, 마일스톤, 역할 책임, 품질/조달 계획
 
-**Skill 6: Manage Project (PRJ-014~040)**
+**Skill 6: Manage Project (PRJ-014~041)**
 - PRJ-014~027: 일정/자원/이슈 모니터링, 변경 관리, 진척도 보고, EVM, 팀 조율
 - PRJ-028~040: 지식 공유, 인수인계, 계약 종료, 사후 평가, 자원 해제, 프로젝트 종료
+- PRJ-041: 일정 일괄 조정 (전체 일정 미루기/앞당기기, "2일 미뤄줘", "일정 연기")
 
 ### Marketing Domain (MKT-001~040) - CMP-IS Domain C: Marketing Management
 **Skill 7: Plan Marketing (MKT-001~015)**
